@@ -25,5 +25,11 @@ def wait_payment():
 def cancel_payment():
     return 'Your purchase was canceled'
 
+resp = client.payments.get_id('rsakehr7k9wr')
+notfication_token = resp.notification_token
+
+resp_payment = client.payments.get(notfication_token)
+print(resp_payment.__dict__)
+
 if (__name__)=="__main__":
     app.run(debug=True)
