@@ -1,11 +1,9 @@
 import json
+from credentials import receiverId, secret
 from pykhipu.client import Client
 from flask import Flask,jsonify, url_for
 
 app= Flask(__name__)
-
-receiverId = '384264'
-secret = 'ab29229f4a8ec49af1813b031831c47cf1af0e35'
 
 client = Client(receiver_id=receiverId, secret=secret)
 
